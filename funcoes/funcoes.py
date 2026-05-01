@@ -95,13 +95,11 @@ def calcula_pontos_quina(face_dados6):
             conta[valor]+= 1
         else:
             conta[valor]= 1
-    tem_quadra= False
+    tem_quina= False
     for valor in conta:
         if conta[valor]>= 5:
-            tem_quadra= True
-    if tem_quadra:
-        soma= 0
-        for x in face_dados6:
-            soma+= x
-        return soma
-    return 0
+            tem_quina= True
+    if tem_quina:
+        return 50
+    else:
+        return 0
