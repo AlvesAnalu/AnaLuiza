@@ -56,14 +56,14 @@ def calcula_pontos_full_house(face_dados4):
     faces_iguais= {}
     soma= 0
     for face in face_dados4:
-        if face in face_dados4:
+        if face in faces_iguais:
             faces_iguais[face]+= 1
         else:
             faces_iguais[face]= 1
     if len(faces_iguais)!= 2:
         return 0
     valores= list(faces_iguais.values())
-    if valores[0]==3 and valores[1]==2 or valores[0]==2 and valores[1]==3:
+    if (valores[0]==3 and valores[1]==2) or (valores[0]==2 and valores[1]==3):
         for face in face_dados4:
             soma += face
         return soma
