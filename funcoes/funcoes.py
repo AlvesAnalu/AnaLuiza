@@ -79,7 +79,7 @@ def calcula_pontos_quadra(face_dados5):
             contagem[valor]= 1
     tem_quadra= False
     for valor in contagem:
-        if contagem[valor]== 4:
+        if contagem[valor]>= 4:
             tem_quadra= True
     if tem_quadra:
         soma= 0
@@ -109,6 +109,7 @@ def calcula_pontos_regra_avancada(dados):
     for x in dados:
         soma += x
     return {
+        'soma': calcula_pontos_soma(dados),
         'cinco_iguais': calcula_pontos_quina(dados),
         'full_house': calcula_pontos_full_house(dados),
         'quadra': calcula_pontos_quadra(dados),
