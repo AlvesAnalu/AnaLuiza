@@ -33,3 +33,13 @@ def calcula_pontos_soma(face_dados):
     for face in face_dados:
         soma+= face
     return soma
+
+def calcula_pontos_sequencia_baixa(face_dados2):
+    if 1 in face_dados2 and 2 in face_dados2 and 3 in face_dados2 and 4 in face_dados2:
+        return 15
+    if 2 in face_dados2 and 3 in face_dados2 and 4 in face_dados2 and 5 in face_dados2:
+        return 15
+    if 3 in face_dados2 and 4 in face_dados2 and 5 in face_dados2 and 6 in face_dados2:
+        return 15
+    else:
+        return 0
