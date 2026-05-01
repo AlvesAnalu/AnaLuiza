@@ -27,3 +27,9 @@ def calcula_pontos_regra_simples(face_dos_dados):
     for dado in face_dos_dados:
         dic_pontos[dado]+= dado
     return dic_pontos
+
+def calcula_pontos_soma(face_dados):
+    soma= 0
+    for face in face_dados:
+        soma+= face
+    return soma
