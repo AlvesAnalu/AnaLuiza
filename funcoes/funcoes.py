@@ -19,3 +19,11 @@ def remover_dado(rolados, guardados, indic):
     guardados_novos= guardados[:indic]+guardados[indic+1:]
     novos_escolhidos= [rolados_novos, guardados_novos]
     return novos_escolhidos
+
+def calcula_pontos_regra_simples(face_dos_dados):
+    dic_pontos={}
+    for i in range(1,7):
+        dic_pontos[i]= 0
+    for dado in face_dos_dados:
+        dic_pontos[dado]+= dado
+    return dic_pontos
