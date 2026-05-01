@@ -80,7 +80,7 @@ def calcula_pontos_quadra(face_dados5):
     for valor in contagem:
         if contagem[valor] == 4:
             soma = 0
-            for x in dados:
+            for x in face_dados5:
                 soma += x
             return soma
     return 0
