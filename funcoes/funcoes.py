@@ -7,8 +7,8 @@ def rolar_dados(quantos_dados):
     return resultados_dados
 
 def guardar_dado(dados_rolados, dados_guardados, indice):
-    valor= dados_rolados[indice]
-    novos_rolados= dados_rolados+[valor]
-    novos_guardados= novos_guardados+[valor]
+    valor = dados_rolados[indice]
+    novos_rolados= dados_rolados[:indice]+dados_rolados[indice+1:]
+    novos_guardados= dados_guardados+[valor]
     dados_escolhidos= [novos_rolados, novos_guardados]
     return dados_escolhidos
