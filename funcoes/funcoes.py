@@ -12,3 +12,10 @@ def guardar_dado(dados_rolados, dados_guardados, indice):
     novos_guardados= dados_guardados+[valor]
     dados_escolhidos= [novos_rolados, novos_guardados]
     return dados_escolhidos
+
+def remover_dado(rolados, guardados, indic):
+    valor= guardados[indic]
+    rolados_novos= rolados+[valor]
+    guardados_novos= guardados[:indic]+guardados[indic+1:]
+    novos_escolhidos= [rolados_novos, guardados_novos]
+    return novos_escolhidos
