@@ -69,3 +69,17 @@ def calcula_pontos_full_house(face_dados4):
         return soma
     else:
         return 0
+    
+def calcula_pontos_quadra(face_dados5):
+    soma= 0
+    for face in face_dados5:
+        contador= 0
+        for outro in face_dados5:
+            if face== outro:
+                contador+= 1
+        if contador==4:
+            for valor in face_dados5:
+                soma+= valor
+            return soma
+        else:
+            return 0
