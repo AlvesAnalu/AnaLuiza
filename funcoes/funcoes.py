@@ -51,3 +51,21 @@ def calcula_pontos_sequencia_alta(face_dados3):
         return 30
     else:
         return 0
+
+def calcula_pontos_full_house(face_dados4):
+    faces_iguais= {}
+    soma= 0
+    for face in face_dados4:
+        if face in face_dados4:
+            faces_iguais[face]+= 1
+        else:
+            faces_iguais[face]= 1
+    if len(faces_iguais)!= 2:
+        return 0
+    valores= list(faces_iguais.values())
+    if valores[0]==3 and valores[1]==2:
+        soma+= face
+    if valores[0]==2 and valores[1]==3:
+        soma+= face
+    else:
+        return 0
