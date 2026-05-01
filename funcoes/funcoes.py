@@ -43,3 +43,12 @@ def calcula_pontos_sequencia_baixa(face_dados2):
         return 15
     else:
         return 0
+    
+    def calcula_pontos_sequencia_alta(face_dados3):
+        if 1 in face_dados3 and 2 in face_dados3 and 3 in face_dados3 and 4 in face_dados3 and 5 in face_dados3:
+            return 30
+        if 2 in face_dados3 and 3 in face_dados3 and 4 in face_dados3 and 5 in face_dados3 and 6 in face_dados3:
+            return 30
+        else:
+            return 0
+    
