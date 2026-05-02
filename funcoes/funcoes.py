@@ -65,7 +65,7 @@ def calcula_pontos_full_house(face_dados4):
     valores= list(faces_iguais.values())
     if (valores[0]==3 and valores[1]==2) or (valores[0]==2 and valores[1]==3):
         for face in face_dados4:
-            soma += face
+            soma+= face
         return soma
     else:
         return 0
@@ -115,27 +115,27 @@ def calcula_pontos_regra_avancada(dados):
     }
 
 def faz_jogada(dados2, categoria, cartela_de_pontos):
-    pontos_simples = calcula_pontos_regra_simples(dados2)
-    pontos_avancados = calcula_pontos_regra_avancada(dados2)
+    pontos_simples= calcula_pontos_regra_simples(dados2)
+    pontos_avancados= calcula_pontos_regra_avancada(dados2)
     if categoria in ["1", "2", "3", "4", "5", "6"]:
-        categoria_int = int(categoria)
-        cartela_de_pontos['regra_simples'][categoria_int] = pontos_simples[categoria_int]
+        categoria_int= int(categoria)
+        cartela_de_pontos['regra_simples'][categoria_int]= pontos_simples[categoria_int]
     else:
-        cartela_de_pontos['regra_avancada'][categoria] = pontos_avancados[categoria]
+        cartela_de_pontos['regra_avancada'][categoria]= pontos_avancados[categoria]
     return cartela_de_pontos
 
 def imprime_cartela(cartela):
     print("Cartela de Pontos:")
     print("-"*25)    
     for i in range(1, 7):
-        filler = " " * (15 - len(str(i)))
-        if cartela['regra_simples'][i] != -1:
+        filler= " " * (15 - len(str(i)))
+        if cartela['regra_simples'][i]!= -1:
             print(f"| {i}: {filler}| {cartela['regra_simples'][i]:02} |")
         else:
             print(f"| {i}: {filler}|    |")
     for i in cartela['regra_avancada'].keys():
-        filler = " " * (15 - len(str(i)))
-        if cartela['regra_avancada'][i] != -1:
+        filler= " " * (15 - len(str(i)))
+        if cartela['regra_avancada'][i]!= -1:
             print(f"| {i}: {filler}| {cartela['regra_avancada'][i]:02} |")
         else:
             print(f"| {i}: {filler}|    |")
