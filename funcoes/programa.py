@@ -9,7 +9,7 @@ def rolar_dados(qtd):
         i+= 1
     return dados
 
-cartela_de_pontos = {
+cartela_de_pontos= {
     'regra_simples': {1:-1, 2:-1, 3:-1, 4:-1, 5:-1, 6:-1},
     'regra_avancada': {
         'sem_combinacao': -1,
